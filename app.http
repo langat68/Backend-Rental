@@ -8,21 +8,19 @@
 
 ### insert users
 
-POST http://localhost:8000/register
+POST http://localhost:8000/api/register
 Content-Type: application/json
 Accept: application/json
 
  {
    
-    "full_name": "Yamal",
-    "email": "Yamal@gmail.com",
+    "full_name": "mojo",
+    "email": "mojo@gmail.com",
     "contact_phone": 455555,
     "address": "kutus",
     "password": "111",
-    "role": "user"
-   
-   
-   }
+     "role": "user"
+    }
    
 
     
@@ -65,7 +63,7 @@ Accept: application/json
 
 
 ###
-  POST http://localhost:8000/login
+  POST http://localhost:8000/api/login
     Content-Type: application/json
 
     {    
@@ -76,12 +74,13 @@ Accept: application/json
     }
 
 ###admin 
-  GET http://localhost:8000/all
+  GET http://localhost:8000/api/all
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwbnBtQGdtYWlsLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDc5MzY5OCwiZXhwIjoxNzIwODA0NDk4fQ.j-L6NOp2OW2AplC4ichGafI4jrsFMpYvni0UywBsjHA
 
 
    ###
-POST   http://localhost:8000/login
+
+POST http://localhost:8000/login
      Content-Type: application/json
 
     {
@@ -155,15 +154,15 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwbnBt
 
 ###insert Customer Support
 
-POST http://localhost:8000/customer-support
+POST http://localhost:8000/api/customer-support-tickets
 Content-Type: application/json
 Accept: application/json
 
 {
          
-    "user_id": 3,
-    "subject": "Screen",
-    "description": "Screen Failure",
+    "user_id": 5,
+    "subject": "CORS",
+    "description": "Fetching data",
     "status": "Active"
 }
         
@@ -173,7 +172,7 @@ Accept: application/json
 
 ###update Customer Support
 
-PUT http://localhost:8000/customer-support/2
+PUT http://localhost:8000/api/customer-support/3
 Content-Type: application/json
 Accept: application/json
 
@@ -184,7 +183,7 @@ Accept: application/json
 
 ###delete Customer Support
 
-DELETE http://localhost:8000/customer-support/3
+DELETE http://localhost:8000/api/customer-support/3
 
 
 
@@ -283,7 +282,7 @@ Accept: application/json
 {
         
     
-    "booking_id": 7,
+    "booking_id": 10,
     "amount": 77899,
     "payment_status": "Pending",
     "payment_date": "2024-07-9",

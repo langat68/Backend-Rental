@@ -26,7 +26,7 @@
   }),createUser);
   
   //update a user
-  userRouter.put("/users/:id",userRoleAuth, updateUser); 
+  userRouter.put("/users/:id", updateUser); 
 
 
 userRouter.get("/users", zValidator('json',userSchema,(result,c)=>{

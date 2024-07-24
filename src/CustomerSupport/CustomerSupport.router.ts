@@ -11,7 +11,7 @@ customerSupportRouter.get("/customer-support-tickets", listCustomerSupport);
 // Get a single customer support entry
 customerSupportRouter.get("/customer-support-tickets/:id", getCustomerSupport);
 // Create a customer support entry
-customerSupportRouter.post("/customer-customer-support-tickets", zValidator('json', customerSupportSchema, (result, c) => {
+customerSupportRouter.post("/customer-support-tickets", zValidator('json', customerSupportSchema, (result, c) => {
   if (!result.success) {
     return c.json(result.error, 400);
   }
